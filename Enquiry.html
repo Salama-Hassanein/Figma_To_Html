@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complete Listing</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="generalStyle.css" />
+  </head>
+
+  <body>
+    <!-- header -->
+
+    <nav id="header"></nav>
+    <script>
+      fetch("./includes/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
+    </script>
+    <!-- end header -->
+
+    <!-- body -->
+    <div class="container-fluid my-5" style="margin: 30px; width: auto">
+      <div class="row check-icon d-flex justify-content-center align-items-center ms-1 " >
+        <!-- <i class="fa-solid fa-message-question" style="color: #5973c4; font-size: 42px"></i> -->
+        <!-- <i class="fa-solid fa-message-question"></i> -->
+        <img src="./assets/chat.png" alt="">
+      </div>
+      
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <h2 class="my-5">Update Listing</h2>
+          <div class="my-4">Hi Aadam,</div>
+
+          <div class="my-4">
+            Your Profile Completeness score plays a significant role in your
+            success with Healthplug. Stop losing customers to your competitors.
+          </div>
+
+          <div class="my-4" style="font-weight: bold">
+            Your current score is 60%
+          </div>
+          <div class="my-5">
+            Having a full and complete profile helps build a seamless user
+            experience. A complete profile results in an average of 3x more
+            customer enquiries.
+          </div>
+          <div>
+            <button
+              class="btn btn-primary my-3"
+              style="background-color: #ff4d00; height: 50px"
+            >
+              Complete Listing <i class="mx-2 fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="my-3">
+            <p>Thanks,</p>
+            <p>Healthplug</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end body -->
+
+    <!-- footer -->
+    <div id="footer"></div>
+    <script>
+      fetch("./includes/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+    <!-- end footer -->
+  </body>
+</html>
